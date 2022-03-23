@@ -1,0 +1,25 @@
+---
+title: "buildURL"
+description: "buildURL combines strings of path segments and returns a properly formatted url string."
+---
+
+# buildURL
+
+**buildURL** combines strings of path segments and returns a properly formatted url string.
+
+## Params
+
+- `paths` - series of paths to combine
+
+## Usage
+
+```jsx
+import { buildURL } from "simple-ts-utils";
+
+const baseURL = "https://app.domain.com";
+const userId = "123";
+
+const url = buildURL(baseURL, "dashboard", userId);
+
+// "https://app.domain.com/dashboard/123"
+```

@@ -1,0 +1,24 @@
+---
+title: "getEnvironmentURL"
+description: "getEnvironmentURL returns the correct url depending on your project's current environment."
+---
+
+# getEnvironmentURL
+
+**getEnvironmentURL** returns the correct url depending on your project's current environment.
+
+## Params
+
+- `developmentURL` - url to use in development
+- `productionURL` - url to use in production
+
+## Usage
+
+```jsx
+import { getEnvironmentURL } from "simple-ts-utils";
+
+const url = getEnvironmentURL("localhost:3000", "https://app.domain.com");
+
+// process.env.NODE_ENV = "development"
+// localhost:3000
+```

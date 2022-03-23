@@ -1,0 +1,39 @@
+---
+title: "requester"
+description: "Requester is a simple asynchronous function to easily create HTTP API requests and get their JSON response."
+---
+
+# Requester
+
+**Requester** is a simple asynchronous function to easily create HTTP API requests and get their JSON response.
+
+## Params
+
+- `url` - a string that represents the endpoint to fetch data from
+- `method` (optional, default = `GET`) - a string with the value `GET`, `DELETE`, `POST`, or `PUT`
+- `body` (optional) - an object containing JSON data to be sent in the request's body
+
+## Usage
+
+### GET
+
+```jsx
+import { requester } from "simple-ts-utils";
+
+const data = await requester("/api/posts");
+
+// { "posts": [...] }
+```
+
+### POST With Data
+
+```jsx
+import { requester } from "simple-ts-utils";
+
+const data = await requester("/api/posts", "POST", {
+  content: "Content",
+  title: "Title"
+});
+
+// { "post": { "id": "1234" }}
+```

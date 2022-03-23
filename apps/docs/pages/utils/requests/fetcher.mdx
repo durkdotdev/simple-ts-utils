@@ -1,0 +1,54 @@
+---
+title: "fetcher"
+description: "Fetcher is a simple asynchronous function to fetch data from an API endpoint and return its JSON response."
+---
+
+# Fetcher
+
+**Fetcher** is a simple asynchronous function to fetch data from an API endpoint and return its JSON response.
+
+## Params
+
+- `url` - a string that represents the endpoint to fetch data from
+
+## Usage
+
+```jsx
+import { fetcher } from "simple-ts-utils";
+
+const data = await fetcher("/api/posts");
+
+// { "posts": [...] }
+```
+
+## With SWR
+
+[SWR](https://swr.vercel.app/) is a React Hook for data fetching that uses a HTTP cache revalidation strategy to fetch up-to-date information. **Fetcher** is perfect for using with SWR:
+
+```jsx
+import { fetcher } from "simple-ts-utils";
+import useSWR from "swr";
+
+const { data, error } = useSWR("/api/posts", fetcher);
+```
+
+Or, use a [SWR Global Configuration](https://swr.vercel.app/docs/global-configuration) with **Fetcher**:
+
+```jsx
+// _app.tsx
+
+import type { AppProps } from "next/app";
+import { fetcher } from "simple-ts-utils";
+import useSWR, { SWRConfig } from "swr";
+
+export default function MyApp({
+  Component,
+  pageProps: { session, ...pageProps }
+}: AppProps) {
+  return (
+    <SWRConfig value={{ fetcher }}>
+      <Component {...pageProps} />
+    </SWRConfig>
+  );
+}
+```

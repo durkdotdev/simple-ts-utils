@@ -1,0 +1,10 @@
+main {
+  width: 100%;
+}
+
+.dark * .nextra-search ul {
+  background: rgb(38, 38, 38);
+}
+.light * .nextra-search ul {
+  background-color: rgb(250, 250, 250);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "simple-ts-utils",
+  "version": "0.0.0",
+  "description": "simple-ts-utils is a small TypeScript package that provides utility functions for common actions used in JavaScript and TypeScript web applications.",
+  "main": "./dist/index.tsx",
+  "types": "./dist/index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "config": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "release": "pnpm build && npx changeset version && npx changeset publish"
+  },
+  "files": ["dist/**/*"],
+  "dependencies": {
+    "@changesets/cli": "^2.21.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/durkdotdev/simple-ts-utils"
+  },
+  "homepage": "simple-ts-utils.durk.dev",
+  "keywords": ["TypeScript"],
+  "author": "durk.dev"
+}
