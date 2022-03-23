@@ -3,7 +3,7 @@
   "compilerOptions": {
     "declaration": true,
     "lib": ["DOM"],
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
   "include": ["./"],
   "exclude": ["dist", "build", "node_modules"]

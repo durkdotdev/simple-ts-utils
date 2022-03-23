@@ -8,11 +8,14 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "bump": "npx changeset && npx changeset version",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\" && pnpm eslint ./ --fix"
+    "format": "prettier --write \"**/*.{json,js,ts,tsx,md,mdx}\" && pnpm eslint ./ --fix",
+    "release": "pnpm bump && turbo run release --parallel && npx changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.21.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.5.1",
