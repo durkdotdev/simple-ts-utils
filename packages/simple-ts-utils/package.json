@@ -1,6 +1,6 @@
 {
   "name": "simple-ts-utils",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "simple-ts-utils is a small TypeScript package that provides utility functions for common actions used in JavaScript and TypeScript web applications.",
   "main": "./dist/index.js",
   "types": "./dist/index.js",
