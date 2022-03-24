@@ -3,6 +3,7 @@
   "compilerOptions": {
     "declaration": true,
     "lib": ["DOM"],
+    "module": "CommonJS",
     "outDir": "./dist"
   },
   "include": ["./"],
