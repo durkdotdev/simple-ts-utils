@@ -33,8 +33,7 @@ const requester = async (
       break;
   }
 
-  const res = await fetch(url, requestObject);
-  return await res.json();
+  return await fetch(url, requestObject);
 };
 
 export default requester;

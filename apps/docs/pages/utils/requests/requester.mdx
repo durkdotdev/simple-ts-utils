@@ -1,19 +1,19 @@
 ---
 title: "Requester"
-description: "Requester is a simple asynchronous function to easily create HTTP API requests and get their JSON response."
+description: "Requester is a simple asynchronous function to easily create HTTP API requests."
 ---
 
 import SEO from "../../../components/SEO";
 
 <SEO
   title="Requester"
-  description="Requester is a simple asynchronous function to easily create HTTP API requests and get their JSON response."
+  description="Requester is a simple asynchronous function to easily create HTTP API requests."
   url="simple-ts-utils.durk.dev/utils/requester"
 />
 
 # Requester
 
-**Requester** is a simple asynchronous function to easily create HTTP API requests and get their JSON response.
+**Requester** is a simple asynchronous function to easily create HTTP API requests.
 
 ## Params
 
@@ -30,6 +30,7 @@ import { requester } from "simple-ts-utils";
 
 const data = await requester("/api/posts");
 
+// data = await data.json();
 // { "posts": [...] }
 ```
 
@@ -43,5 +44,6 @@ const data = await requester("/api/posts", "POST", {
   title: "Title"
 });
 
+// data = await data.json();
 // { "post": { "id": "1234" }}
 ```
