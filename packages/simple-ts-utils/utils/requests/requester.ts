@@ -6,6 +6,13 @@ interface RequestObjectProps {
   method: string;
 }
 
+/**
+ * Simple asynchronous function to easily create HTTP API requests
+ * @param url The endpoint to fetch data from
+ * @param method Default "GET", HTTP method
+ * @param [body] Optional object containing JSON data to be sent in the request's body
+ * @returns Response
+ */
 const requester = async (
   url: string,
   method: "DELETE" | "GET" | "POST" | "PUT" = "GET",

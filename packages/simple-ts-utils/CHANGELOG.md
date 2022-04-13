@@ -1,5 +1,11 @@
 # simple-ts-utils
 
+## 1.2.0
+
+### Minor Changes
+
+- add JSDoc
+
 ## 1.1.0
 
 ### Minor Changes
