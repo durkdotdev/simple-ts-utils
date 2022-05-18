@@ -1,5 +1,11 @@
 # simple-ts-utils
 
+## 1.2.1
+
+### Patch Changes
+
+- Add README.md
+
 ## 1.2.0
 
 ### Minor Changes
